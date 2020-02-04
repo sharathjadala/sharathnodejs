@@ -5,6 +5,9 @@ pipeline{
        steps{
          git 'https://github.com/sharathjadala/sharathnodejs.git'
          }
-        stage('build docker image'){
-     }
-    }
+       node {
+    checkout scm
+    def customImage = docker.build("my-image:${env.BUILD_ID}")
+    customImage.push()
+       }
+    }   
