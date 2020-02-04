@@ -1,3 +1,6 @@
-'use strict';
+var http = require('http');
 
-console.log('Hello world');
+http.createServer(function (req, res) {
+  res.writeHead(200, {'Content-Type': 'text/plain'});
+  res.end('Hello World!');
+}).listen(8080);v
