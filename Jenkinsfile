@@ -5,5 +5,5 @@ pipeline{
        steps{
          git 'https://github.com/sharathjadala/sharathnodejs.git'
          }
-       }  
-    }
+        stage('build docker image'){
+     }
